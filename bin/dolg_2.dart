@@ -16,8 +16,8 @@ void main(List<String> arguments) async {
   double sum = 0;
   int count = 0;
   for (dynamic element in cars_arr) {
-    String col = element["car_color"];
-    double pric = double.parse(element['price'].substring(1));
+    String col = element.car_color;
+    double pric = double.parse(element.price.substring(1));
 
     if(col == "Yellow"){
       sum += pric;
@@ -25,6 +25,7 @@ void main(List<String> arguments) async {
     }
   }
   double average = sum/count;
+  print(average);
 
 
 
